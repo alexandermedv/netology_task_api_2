@@ -12,7 +12,8 @@ class YaUploader:
         """Метод загружает файлы по списку file_list на яндекс диск"""
         # Тут ваша логика
         url = 'https://cloud-api.yandex.net/v1/disk/resources/upload'
-        token = 'AQAAAAA9Vi2rAADLWzCWBMYbGUIDs3nuZ_W6Ies'
+        # Вставьте свой токен:
+        token = ''
         headers = {"Authorization": token}
 
         for file_path in self.file_list:
@@ -30,8 +31,6 @@ class YaUploader:
                     return 'Файл не загружен'
 
         return 'Загрузка выполнена'
-
-
 
 
 if __name__ == '__main__':
